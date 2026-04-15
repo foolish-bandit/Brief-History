@@ -1,20 +1,80 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Brief History
 
-# Run and deploy your AI Studio app
+An infinitely explorable legal history engine.
 
-This contains everything you need to run your app locally.
+Brief History generates interactive, AI-powered timelines of legal events, doctrines, and precedent. Ask a question, get a timeline. Click any node, go deeper. There is no bottom.
 
-View your app in AI Studio: https://ai.studio/apps/5413d722-efd4-4039-bbcf-55bb009e5440
+## What It Does
 
-## Run Locally
+- **Timeline generation** - Enter any legal topic and get a structured, chronological timeline of key events, cases, and legislative milestones.
+- **Infinite depth** - Every timeline node is itself a starting point. Click through to drill into sub-events, related doctrines, concurrences, dissents, and downstream effects.
+- **AI-powered research** - Uses the Gemini API to synthesize legal history on the fly, not from a static database.
+- **Local persistence** - SQLite (via better-sqlite3) caches explored timelines so you don't re-fetch what you've already mapped.
+- **Animated UI** - Smooth transitions and motion-driven interactions via Motion (Framer Motion).
 
-**Prerequisites:**  Node.js
+## Tech Stack
 
+| Layer | Tech |
+|-------|------|
+| Frontend | React 19, TypeScript, Tailwind CSS v4 |
+| Build | Vite 6 |
+| AI | Google Gemini (`@google/genai`) |
+| Database | better-sqlite3 |
+| Server | Express |
+| Animation | Motion (Framer Motion) |
+| Icons | Lucide React |
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- A [Gemini API key](https://aistudio.google.com/app/apikey)
+
+### Setup
+
+```bash
+git clone https://github.com/foolish-bandit/BriefHistory.git
+cd BriefHistory
+npm install
+```
+
+Create a `.env.local` file in the root directory:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+### Run
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:3000`.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview the production build |
+| `npm run clean` | Remove the `dist` directory |
+| `npm run lint` | Type-check with TypeScript |
+
+## Roadmap
+
+- [ ] Shareable timeline permalinks
+- [ ] Export timelines to PDF/Markdown
+- [ ] Jurisdiction filtering (U.S. federal, state, international)
+- [ ] Citation graph visualization
+- [ ] Multi-model support (Claude, GPT, local models)
+
+## License
+
+MIT
+
+---
+
+Built by [Zack Brewer](https://github.com/foolish-bandit)
