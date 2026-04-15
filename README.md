@@ -77,4 +77,4 @@ MIT
 
 ---
 
-Built by [Zack Brewer](https://github.com/foolish-bandit)
+Built by [Zack Brenner](https://github.com/foolish-bandit)
