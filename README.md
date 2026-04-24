@@ -13,6 +13,7 @@
 
 <p align="center">
   Brief History generates interactive, AI-powered timelines of legal events, doctrines, and precedent.<br/>
+<p align="center">  
   Every node is a starting point. Every drill-down reveals more. <strong>There is no bottom.</strong>
 </p>
 
